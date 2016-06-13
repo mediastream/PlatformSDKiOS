@@ -10,4 +10,4 @@ See docs/ for detailed instructions.
 
 ## License
 
-MediastreamPlatformSDK is available under the MIT license. See the LICENSE file for more info.
+MediastreamPlatformSDK is available under the MIT license.

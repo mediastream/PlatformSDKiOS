@@ -64,7 +64,7 @@ Essa classe possui as configurações do MediastreamPlatformSDK.
 ### Atributos
 
 | Nome | Tipo | Obrigatório | Descrição |
-| --- | --- | --- | ---
+| --- | --- | --- | --- |
 | id | String | Sim | ID do vídeo |
 | type | MediastreamPlayerConfig.VideoTypes | Sim | Tipo do vídeo. Valores possíveis: `VOD`, `LIVE` |
 | environment | MediastreamPlayerConfig.Environments | Não | Ambiente em que está localizado o vídeo, `PRODUCTION` ou `QA`. Default: `PRODUCTION` |
@@ -75,7 +75,7 @@ Essa classe possui as configurações do MediastreamPlatformSDK.
 ### Métodos
 
 | Retorno | Método | Descrição |
-| --- | --- | --- | ---
+| --- | --- | --- |
 | void | addAdCustomAttribute(key: String, value: String) | Adiciona um atributo customizado ao ad. Somente utilizado se foi passado adUrl. |
 
 ### Construtores
@@ -89,12 +89,13 @@ MediastreamPlatformSDK cria o player para Live ou VOD da Plataforma Mediastream.
 ### Atributos
 
 | Nome | Tipo | Obrigatório | Descrição |
+| --- | --- | --- | --- |
 | volume | Int | Não | Altera volume do vídeo e retorna volume atual. |
 
 ### Métodos
 
 | Retorno | Método | Descrição |
-| --- | --- | --- | ---
+| --- | --- | --- |
 | void | setup(config: MediastreamPlayerConfig) | Configura o player. |
 | void | addPlayerCallback(MediastreamPlayerCallback callback) | Adiciona callbacks que serão chamados quando o player entrar em modo tela cheia e sair de modo tela cheia. |
 | void | play() | Inicia reprodução do vídeo. |

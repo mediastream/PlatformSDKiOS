@@ -12,7 +12,7 @@ Primeiro é necessário incluir a biblioteca nas dependências de seu projeto. A
 Uma vez instalado o Carthage, no diretório raiz de sua aplicação, crie um arquivo Cartfile com o seguinte conteúdo:
 
 ```
-github "mediastream/MediastreamPlatformSDKiOS"
+github "mediastream/PlatformSDKiOS"
 ```
 
 Em seguida, rode o comando:

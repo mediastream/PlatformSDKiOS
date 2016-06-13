@@ -91,16 +91,17 @@ MediastreamPlatformSDK cria o player para Live ou VOD da Plataforma Mediastream.
 | Nome | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
 | volume | Int | Não | Altera volume do vídeo e retorna volume atual. |
+| currentTime | Double | Não | Posição atual do vídeo. Ao passar um novo valor ao atributo, o resultado é o mesmo que chamar o método seekTo. |
 
 ### Métodos
 
 | Retorno | Método | Descrição |
 | --- | --- | --- |
 | void | setup(config: MediastreamPlayerConfig) | Configura o player. |
-| void | addPlayerCallback(MediastreamPlayerCallback callback) | Adiciona callbacks que serão chamados quando o player entrar em modo tela cheia e sair de modo tela cheia. |
 | void | play() | Inicia reprodução do vídeo. |
 | void | pause() | Pausa reprodução do vídeo. |
 | void | stop() | Pára reprodução do vídeo. Igual a pause() |
+| void | seekTo(Double: position) | Altera a posição do video para o tempo especificado. |
 
 ### Construtores
 
@@ -117,5 +118,3 @@ MediastreamPlatformSDK()
 ### Opções
 
 `LIVE`, `VOD`
-
-Veja o JavaDoc em docs/javadoc/ para maiores informações.

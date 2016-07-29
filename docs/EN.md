@@ -1,31 +1,31 @@
 # Mediastream Platform SDK iOS
 
-## Introdução
+## Overview
 
-Essa biblioteca permite incluir e controlar mídias e live streams localizados na Plataform Mediastream em sua aplicação iOS.
+This library allows you to embed and control your VOD and Live Stream player on your iOS application.
 
-# Como usar
+# Usage
 
-## Passos iniciais
+## Getting started
 
-Primeiro é necessário incluir a biblioteca nas dependências de seu projeto. A forma mais fácil de fazer isso é instalá-lo usando Carthage (https://github.com/Carthage/Carthage).
-Uma vez instalado o Carthage, no diretório raiz de sua aplicação, crie um arquivo Cartfile com o seguinte conteúdo:
+First you need to add the library in your dependencies. The easiest way to do it is to install it using Carthage (https://github.com/Carthage/Carthage).
+Once Carthage is already installed, in the root directory of your app, create a file called Cartfile with the following content:
 
 ```
 github "mediastream/PlatformSDKiOS"
 ```
 
-Em seguida, rode o comando:
+Then run the command:
 
 ```
 carthage update
 ```
 
-Não se esqueça de desabilitar a opção App Transport Security de sua aplicação para permitir requisições http:
+Make sure to enable the option 'App Transport Security' in your app to allow it to make HTTP requests
 
 ![alt tag](disable_app_transport_security.png)
 
-Agora você já pode começar a usar a biblioteca, veja o exemplo abaixo:
+After doing this, you can start with this basic example of usage:
 
 ```swift
 import UIKit
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         let playerConfig = MediastreamPlayerConfig()
         let mdstrm = MediastreamPlatformSDK()
 
-        playerConfig.environment = MediastreamPlayerConfig.Environments.QA
+        playerConfig.environment = MediastreamPlayerConfig.Environments.PRODUCTION
         playerConfig.type = MediastreamPlayerConfig.VideoTypes.LIVE
         playerConfig.id = "525431f81bc42c4539000057"
 
@@ -57,64 +57,64 @@ class ViewController: UIViewController {
 }
 ```
 
-## Classe MediastreamPlayerConfig
+## MediastreamPlayerConfig Class
 
-Essa classe possui as configurações do MediastreamPlatformSDK.
+This class holds the configurations for the MediastreamPlatformSDK.
 
-### Atributos
+### Properties
 
-| Nome | Tipo | Obrigatório | Descrição |
+| Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| id | String | Sim | ID do vídeo |
-| type | MediastreamPlayerConfig.VideoTypes | Sim | Tipo do vídeo. Valores possíveis: `VOD`, `LIVE` |
-| environment | MediastreamPlayerConfig.Environments | Não | Ambiente em que está localizado o vídeo, `PRODUCTION` ou `QA`. Default: `PRODUCTION` |
-| adUrl | String | Não | AdURL (ex: VAST). Opcional, se não especificado serão utilizadas as opções configuradas na Plataforma Mediastream. |
-| accessToken | String | Não | Access token para vídeos restritos. |
-| volume | Int | Não | Volume inicial do vídeo. |
+| id | String | Yes | Video ID |
+| type | MediastreamPlayerConfig.VideoTypes | YES | Video Type. posible values: `VOD`, `LIVE` |
+| environment | MediastreamPlayerConfig.Environments | No | Envirinment where the video is located, `PRODUCTION` or `QA`. Default: `PRODUCTION` |
+| adUrl | String | No | AdURL (e.g. VAST). Optional, if not specified will play ads configured in Mediastream Platform. |
+| accessToken | String | No | Access token for restricted videos. |
+| volume | Int | No | Initial volume. |
 
-### Métodos
+### Methods
 
-| Retorno | Método | Descrição |
+| Return | Method | Description |
 | --- | --- | --- |
-| void | addAdCustomAttribute(key: String, value: String) | Adiciona um atributo customizado ao ad. Somente utilizado se foi passado adUrl. |
+| void | addAdCustomAttribute(key: String, value: String) | Add a custom attribute to the Ad. It applys only if a adUrl was passed |
 
-### Construtores
+### Contructors
 
 MediastreamPlayerConfig()
 
-## Classe MediastreamPlatformSDK
+## MediastreamPlatformSDK Class
 
-MediastreamPlatformSDK cria o player para Live ou VOD da Plataforma Mediastream.
+Mediastream player for Live or VOD from Mediastream Platform. Includes ads from VAST.
 
-### Atributos
+### Properties
 
-| Nome | Tipo | Obrigatório | Descrição |
+| Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| volume | Int | Não | Altera volume do vídeo e retorna volume atual. |
-| currentTime | Double | Não | Posição atual do vídeo. Ao passar um novo valor ao atributo, o resultado é o mesmo que chamar o método seekTo. |
+| volume | Int | No | Changes the video volume and return the current value |
+| currentTime | Double | No | Return the current position of the video. If a value is provided the player will jump to that position |
 
-### Métodos
+### Method
 
-| Retorno | Método | Descrição |
+| Return | Method | Description |
 | --- | --- | --- |
-| void | setup(config: MediastreamPlayerConfig) | Configura o player. |
-| void | play() | Inicia reprodução do vídeo. |
-| void | pause() | Pausa reprodução do vídeo. |
-| void | stop() | Pára reprodução do vídeo. Igual a pause() |
-| void | seekTo(Double: position) | Altera a posição do video para o tempo especificado. |
+| void | setup(config: MediastreamPlayerConfig) | Configure the player. |
+| void | play() | Start playing the video |
+| void | pause() | Pauses the vídeo. |
+| void | stop() | Stop playing the video. Same as pause() |
+| void | seekTo(Double: position) | Go to the specified position in the video. |
 
-### Construtores
+### Constructors
 
 MediastreamPlatformSDK()
 
 ## Enum MediastreamPlayerConfig.Environments
 
-### Opções
+### Options
 
 `PRODUCTION`, `QA`
 
 ## Enum MediastreamPlayerConfig.VideoTypes
 
-### Opções
+### Options
 
 `LIVE`, `VOD`

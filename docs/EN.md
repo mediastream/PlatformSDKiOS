@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         let mdstrm = MediastreamPlatformSDK()
 
         playerConfig.type = MediastreamPlayerConfig.VideoTypes.VOD
-        playerConfig.id = "525431f81bc42c4539000057"
+        playerConfig.id = "567317b15050c6e76e896864"
 
         self.addChildViewController(mdstrm)
         self.view.addSubview(mdstrm.view)

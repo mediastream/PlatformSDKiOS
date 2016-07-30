@@ -75,7 +75,7 @@ This class holds the configurations for the MediastreamPlatformSDK.
 
 | Return | Method | Description |
 | --- | --- | --- |
-| void | addAdCustomAttribute(key: String, value: String) | Add a custom attribute to the Ad. It applys only if a adUrl was passed |
+| void | addAdCustomAttribute(key: String, value: String) | Add a custom attribute to the Ad. It applys only if an adUrl was passed |
 
 ### Contructors
 

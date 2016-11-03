@@ -125,7 +125,6 @@ MediastreamPlatoformSDK provides a build in event handler for capturing differen
 # Usage
 ```
 let mdstrm = MediastreamPlatformSDK()
-let events = mdstrm.events
 
 mdstrm.events.listenTo(eventName: "play", action: {
     NSLog("Player is playing")

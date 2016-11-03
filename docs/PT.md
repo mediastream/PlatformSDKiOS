@@ -111,7 +111,6 @@ MediastreamPlatoformSDK possui já integrado um gestor de eventos que pode ser u
 # Uso
 ```
 let mdstrm = MediastreamPlatformSDK()
-let events = mdstrm.events
 
 mdstrm.events.listenTo(eventName: "play", action: {
     NSLog("Player is playing")

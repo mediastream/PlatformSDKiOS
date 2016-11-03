@@ -39,6 +39,22 @@ class ViewController: UIViewController {
         let playerConfig = MediastreamPlayerConfig()
         let mdstrm = MediastreamPlatformSDK()
 
+        mdstrm.events.listenTo(eventName: "play", action: {
+            NSLog("Player is playing")
+        })
+        
+        mdstrm.events.listenTo(eventName: "pause", action: {
+            NSLog("Player is paused")
+        })
+        
+        mdstrm.events.listenTo(eventName: "error", action: { (information: Any?) in
+            if (information != nil) {
+                if let info = information as? String {
+                    NSLog("ERROR: \(info)")
+                }
+            }
+        })
+
         playerConfig.type = MediastreamPlayerConfig.VideoTypes.VOD
         playerConfig.id = "567317b15050c6e76e896864"
 
@@ -101,6 +117,38 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | void | pause() | Pauses the vídeo. |
 | void | stop() | Stop playing the video. Same as pause() |
 | void | seekTo(Double: position) | Go to the specified position in the video. |
+
+### Events
+
+MediastreamPlatoformSDK provides a build in event handler for capturing different events that may ocurr during the video reproduction
+
+# Usage
+```
+let mdstrm = MediastreamPlatformSDK()
+let events = mdstrm.events
+
+mdstrm.events.listenTo(eventName: "play", action: {
+    NSLog("Player is playing")
+})
+
+mdstrm.events.listenTo(eventName: "pause", action: {
+    NSLog("Player is paused")
+})
+
+mdstrm.events.listenTo(eventName: "error", action: { (information: Any?) in
+    if (information != nil) {
+        if let info = information as? String {
+            NSLog("ERROR: \(info)")
+        }
+    }
+})
+```
+Available events
+
+* play: Triggers whenever the video starts playing
+* pause: Triggers whenever the video stops playing
+* error: Triggers whenever there is an error with the reproduction
+
 
 ### Constructors
 

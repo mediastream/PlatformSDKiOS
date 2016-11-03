@@ -103,6 +103,38 @@ MediastreamPlatformSDK cria o player para Live ou VOD da Plataforma Mediastream.
 | void | stop() | Pára reprodução do vídeo. Igual a pause() |
 | void | seekTo(Double: position) | Altera a posição do video para o tempo especificado. |
 
+
+### Eventos
+
+MediastreamPlatoformSDK possui já integrado um gestor de eventos que pode ser usado para capturar diferentes eventos que possam ocorrer durante a reprodução.
+
+# Uso
+```
+let mdstrm = MediastreamPlatformSDK()
+let events = mdstrm.events
+
+mdstrm.events.listenTo(eventName: "play", action: {
+    NSLog("Player is playing")
+})
+
+mdstrm.events.listenTo(eventName: "pause", action: {
+    NSLog("Player is paused")
+})
+
+mdstrm.events.listenTo(eventName: "error", action: { (information: Any?) in
+    if (information != nil) {
+        if let info = information as? String {
+            NSLog("ERROR: \(info)")
+        }
+    }
+})
+```
+Available events
+
+* play: Dispara sempre que a reprodução é iniciada
+* pause: Dispara sempre que a reprodução é pausada
+* error: Dispara sempre que ocorre um erro durante a reprodução
+
 ### Construtores
 
 MediastreamPlatformSDK()

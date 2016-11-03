@@ -122,7 +122,7 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 
 MediastreamPlatoformSDK provides a build in event handler for capturing different events that may ocurr during the video reproduction
 
-# Usage
+### Usage
 ```
 let mdstrm = MediastreamPlatformSDK()
 

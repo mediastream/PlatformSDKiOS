@@ -109,7 +109,7 @@ MediastreamPlatformSDK cria o player para Live ou VOD da Plataforma Mediastream.
 MediastreamPlatoformSDK possui já integrado um gestor de eventos que pode ser usado para capturar diferentes eventos que possam ocorrer durante a reprodução.
 
 ### Uso
-```
+```swift
 let mdstrm = MediastreamPlatformSDK()
 
 mdstrm.events.listenTo(eventName: "play", action: {

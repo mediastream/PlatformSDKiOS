@@ -54,7 +54,8 @@ class ViewController: UIViewController {
                 }
             }
         })
-
+        
+        playerConfig.accountID = "577beb007f565cf33ae87fa8" // AccoundID is now REQUIRED
         playerConfig.type = MediastreamPlayerConfig.VideoTypes.VOD
         playerConfig.id = "567317b15050c6e76e896864"
 

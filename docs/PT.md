@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         let playerConfig = MediastreamPlayerConfig()
         let mdstrm = MediastreamPlatformSDK()
 
+        playerConfig.accountID = "577beb007f565cf33ae87fa8" // accountID is now REQUIRED
         playerConfig.environment = MediastreamPlayerConfig.Environments.QA
         playerConfig.type = MediastreamPlayerConfig.VideoTypes.LIVE
         playerConfig.id = "525431f81bc42c4539000057"

@@ -87,12 +87,15 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | adUrl | String | No | AdURL (e.g. VAST). Optional, if not specified will play ads configured in Mediastream Platform. |
 | accessToken | String | No | Access token for restricted videos. |
 | volume | Int | No | Initial volume. |
+| drmUrl | String | No | Url to get license to play protected files with drm. |
+| appCertificateUrl | String | No | Url to download the certificate neccesary to complete the request to play protectes files. |
 
 ### Methods
 
 | Return | Method | Description |
 | --- | --- | --- |
 | void | addAdCustomAttribute(key: String, value: String) | Add a custom attribute to the Ad. It applys only if an adUrl was passed |
+| void | addDrmHeader(key: String, value: String) | Allows to add headers necessary to complete the request to get the license to play protected files. |
 
 ### Contructors
 

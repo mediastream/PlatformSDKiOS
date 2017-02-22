@@ -44,6 +44,16 @@ class ViewController: UIViewController {
         playerConfig.type = MediastreamPlayerConfig.VideoTypes.LIVE
         playerConfig.id = "525431f81bc42c4539000057"
 
+        //If you're using protected files you need add:
+        //Url to get certificate needed to play protected files
+        playerConfig.appCertificateUrl = "https://s3.amazonaws.com/streammanagerqa/player/drm/55117baedc01616019533551.cer"
+        
+        //Url to get license needed to play protected files
+        playerConfig.drmUrl = "http://drm-fairplay-licensing.axtest.net/AcquireLicense"
+        
+        //Headers with the token of the file requested, this headers are needed to complement the main request with the drm license and certificate
+        playerConfig.addDrmHeader("X-AxDRM-Message", value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiMjdGNkNDMTEtODRGMS00MzFELTk5MDItQTZDODAwRUM4NzBCIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImV4cGlyYXRpb25fZGF0ZSI6IjIwMTctMDUtMDFUMDc6NDU6MDIuMjM1WiIsImtleXMiOlt7ImlkIjoiYzUwODUzNjctNzA4Ni00OGFlLTgwN2MtNDMzZDhlYzBkYzRlIiwiaXYiOiIrWU91SG9wOEdoMVdHY0x1VUYvV3V3PT0ifV19fQ.u4uneeLvwWhOtvotvMBTQY2ymdNt-zr_OYiKkViXGd0")
+
         self.addChildViewController(mdstrm)
         self.view.addSubview(mdstrm.view)
 

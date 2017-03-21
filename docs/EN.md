@@ -21,9 +21,9 @@ Then run the command:
 carthage update
 ```
 
-Make sure to enable the option 'App Transport Security' in your app to allow it to make HTTP requests
+Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.
 
-![alt tag](disable_app_transport_security.png)
+![alt tag](disable_app_transport_security_and_required_background_modes.png)
 
 After doing this, you can start with this basic example of usage:
 
@@ -42,11 +42,11 @@ class ViewController: UIViewController {
         mdstrm.events.listenTo(eventName: "play", action: {
             NSLog("Player is playing")
         })
-        
+
         mdstrm.events.listenTo(eventName: "pause", action: {
             NSLog("Player is paused")
         })
-        
+
         mdstrm.events.listenTo(eventName: "error", action: { (information: Any?) in
             if (information != nil) {
                 if let info = information as? String {
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                 }
             }
         })
-        
+
         playerConfig.accountID = "577beb007f565cf33ae87fa8" // AccoundID is now REQUIRED
         playerConfig.type = MediastreamPlayerConfig.VideoTypes.VOD
         playerConfig.id = "567317b15050c6e76e896864"
@@ -62,10 +62,10 @@ class ViewController: UIViewController {
         //If you're using protected files you need add:
         //Url to get certificate needed to play protected files
         playerConfig.appCertificateUrl = "https://s3.amazonaws.com/streammanagerqa/player/drm/55117baedc01616019533551.cer"
-        
+
         //Url to get license needed to play protected files
         playerConfig.drmUrl = "http://drm-fairplay-licensing.axtest.net/AcquireLicense"
-        
+
         //Headers with the token of the file requested, this headers are needed to complement the main request with the drm license and certificate
         playerConfig.addDrmHeader("X-AxDRM-Message", value: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJjb21fa2V5X2lkIjoiMjdGNkNDMTEtODRGMS00MzFELTk5MDItQTZDODAwRUM4NzBCIiwibWVzc2FnZSI6eyJ0eXBlIjoiZW50aXRsZW1lbnRfbWVzc2FnZSIsImV4cGlyYXRpb25fZGF0ZSI6IjIwMTctMDUtMDFUMDc6NDU6MDIuMjM1WiIsImtleXMiOlt7ImlkIjoiYzUwODUzNjctNzA4Ni00OGFlLTgwN2MtNDMzZDhlYzBkYzRlIiwiaXYiOiIrWU91SG9wOEdoMVdHY0x1VUYvV3V3PT0ifV19fQ.u4uneeLvwWhOtvotvMBTQY2ymdNt-zr_OYiKkViXGd0")
 

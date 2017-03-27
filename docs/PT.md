@@ -114,8 +114,8 @@ MediastreamPlatformSDK cria o player para Live ou VOD da Plataforma Mediastream.
 | void | setup(config: MediastreamPlayerConfig) | Configura o player. |
 | void | play() | Inicia reprodução do vídeo. |
 | void | pause() | Pausa reprodução do vídeo. |
-| void | stop() | Pára reprodução do vídeo. Igual a pause() |
-| void | seekTo(Double: position) | Altera a posição do video para o tempo especificado.
+| void | stop() | Pára reprodução do vídeo. Igual a pause(). |
+| void | seekTo(Double: position) | Altera a posição do video para o tempo especificado. |
 | void | releasePlayer() | Este método é utilizado para destruir o player atual, por padrão é executado quando ocorre o evento “ViewWillDisappear()”. Se for necessário, pode ser chamado em outra instância. Recomendamos neste caso fazê-lo dentro do evento “deinit()” da janela. |
 
 

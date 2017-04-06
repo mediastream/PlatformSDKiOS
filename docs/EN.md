@@ -98,7 +98,8 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | accessToken | String | No | Access token for restricted videos. |
 | volume | Int | No | Initial volume. |
 | drmUrl | String | No | Url to get license to play protected files with drm. |
-| appCertificateUrl | String | No | Url to download the certificate neccesary to complete the request to play protectes files. |
+| appCertificateUrl | String | No | Url to download the certificate neccesary to complete the request to play protectes files.|
+| customerID | String | No | Unique Identification string for the video consumer customer.|
 
 ### Methods
 

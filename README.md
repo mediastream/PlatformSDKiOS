@@ -25,7 +25,9 @@ Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "Ap
 
 ![alt tag](files/disable_app_transport_security_and_required_background_modes.png)
 
-After doing this, you can start with this basic example of usage:
+
+### Example
+After doing this, you can [Donwload a Sample](files/sample.zip) or you can start with this basic code example of usage:
 
 ```swift
 import UIKit
@@ -140,10 +142,6 @@ MediastreamPlatoformSDK provides a build in event handler for capturing differen
 
 ### Example
 
-### Download
-You can [download an example](files/sample.zip) that explain how to use MediastreamPlatformSDk with views.
-
-### Code
 ```swift
 let mdstrm = MediastreamPlatformSDK()
 

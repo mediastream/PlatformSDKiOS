@@ -139,6 +139,11 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 MediastreamPlatoformSDK provides a build in event handler for capturing different events that may ocurr during the video reproduction
 
 ### Example
+
+### Download
+You can [download an example](files/sample.zip) that explain how to use MediastreamPlatformSDk with views.
+
+### Code
 ```swift
 let mdstrm = MediastreamPlatformSDK()
 
@@ -166,6 +171,7 @@ Available events
 * onFullScreen: Triggers whenever the video is on Fullscreen mode
 * offFullScreen: Triggers whenever the video is not on Fullscreen mode
 
+
 ### Constructors
 
 MediastreamPlatformSDK()
@@ -185,6 +191,3 @@ MediastreamPlatformSDK()
 ## License
 
 MediastreamPlatformSDK is available under the MIT license.
-
-## Sample
-You can [Download an example](files/sample.zip) that explain how to use MediastreamPlatformSDk with views.

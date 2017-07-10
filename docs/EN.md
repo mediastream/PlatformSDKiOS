@@ -163,7 +163,8 @@ Available events
 * play: Triggers whenever the video starts playing
 * pause: Triggers whenever the video stops playing
 * error: Triggers whenever there is an error with the reproduction
-
+* onFullScreen: Triggers whenever the video is on Fullscreen mode
+* offFullScreen: Triggers whenever the video is not on Fullscreen mode
 
 ### Constructors
 

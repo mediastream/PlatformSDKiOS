@@ -11,3 +11,6 @@ See docs/ for detailed instructions.
 ## License
 
 MediastreamPlatformSDK is available under the MIT license.
+
+## Sample
+You can download a little example, this include how MediastreamPlatformSDK works with some views.

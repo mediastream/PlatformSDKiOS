@@ -148,6 +148,8 @@ Available events
 * play: Dispara sempre que a reprodução é iniciada
 * pause: Dispara sempre que a reprodução é pausada
 * error: Dispara sempre que ocorre um erro durante a reprodução
+* onFullScreen: Dispara sempre que o vídeo está no modo de tela cheia
+* offFullScreen: Dispara sempre que o vídeo não está em modo de tela cheia
 
 ### Construtores
 

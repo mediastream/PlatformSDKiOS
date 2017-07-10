@@ -132,7 +132,7 @@ Mediastream player for Live or VOD from Mediastream Platform. Includes ads from 
 | void | pause() | Pauses the video. |
 | void | stop() | Stop playing the video. Same as pause(). |
 | void | seekTo(Double: position) | Go to the specified position in the video. |
-| void | releasePlayer() | This method is used to destroy the actual player, by default is executed in the event "ViewWillDisappear()", if you need to you can call this method in another instance, as a recommendation it's preferable to call it in the "deinit()" event of your view. |
+| void | releasePlayer() | This method is used to destroy the actual player, as a recommendation it's preferable to call it in the "deinit()" event of your view. |
 
 ### Events
 

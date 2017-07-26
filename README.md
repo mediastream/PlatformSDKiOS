@@ -168,7 +168,8 @@ Available events
 * error: Triggers whenever there is an error with the reproduction
 * onFullScreen: Triggers whenever the video is on Fullscreen mode
 * offFullScreen: Triggers whenever the video is not on Fullscreen mode
-
+* conectionStablished: Triggers whenever the SDK is connected to internet
+* conectionLost: Triggers whenever the SDK lost internet connection
 
 ### Constructors
 

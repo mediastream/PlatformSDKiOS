@@ -102,6 +102,10 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | drmUrl | String | No | Url to get license to play protected files with drm. |
 | appCertificateUrl | String | No | Url to download the certificate neccesary to complete the request to play protectes files.|
 | customerID | String | No | Unique Identification string for the video consumer customer.|
+| dvr | boolean | No | Player starts prepared to use dvr, to use you need to set a windowDRV. Default: false |
+| windowDVR | int | No | Window dvr voiced in seconds.|
+| showControls | boolean | No | Hide the controls of the player. Default: true |
+| referer | string | No | Allows set a custom referrer to find in the statistics. |
 
 ### Methods
 

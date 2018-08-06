@@ -12,7 +12,7 @@ First you need to add the library in your dependencies. The easiest way to do it
 Once Carthage is already installed, in the root directory of your app, create a file called Cartfile with the following content:
 
 ```
-github "mediastream/PlatformSDKiOS"
+github "mediastream/PlatformSDKiOS" "v5.1.0"
 ```
 
 Then run the command:

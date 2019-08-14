@@ -94,8 +94,8 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
 | id | String | Yes | Video ID |
-| type | MediastreamPlayerConfig.VideoTypes | YES | Video Type. posible values: `VOD`, `LIVE` |
-| environment | MediastreamPlayerConfig.Environments | No | Envirinment where the video is located, `PRODUCTION` or `QA`. Default: `PRODUCTION` |
+| type | MediastreamPlayerConfig.VideoTypes | YES | Video Type. posible values: `VOD`, `LIVE`, `EPISODE` |
+| environment | MediastreamPlayerConfig.Environments | No | Envirinment where the video is located, `PRODUCTION` or `DEV`. Default: `PRODUCTION` |
 | adUrl | String | No | AdURL (e.g. VAST). Optional, if not specified will play ads configured in Mediastream Platform. |
 | accessToken | String | No | Access token for restricted videos. |
 | volume | Int | No | Initial volume. |
@@ -106,6 +106,10 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | windowDVR | int | No | Window dvr voiced in seconds.|
 | showControls | boolean | No | Hide the controls of the player. Default: true |
 | referer | string | No | Allows set a custom referrer to find in the statistics. |
+| customUI | boolean | No | Show a custom mediastream UI for AVPlayer. Default: false |
+| loadNextAutomatically | boolean | No | Play next episode if exist (Only available if type EPISODE is setted). Default: false |
+| videoFormat | MediastreamPlayerConfig.AudioVideoFormat | No | Video/Audio format available to play a source, `HLS`, `M4A`. Default: `HLS` |
+
 
 ### Methods
 
@@ -183,13 +187,13 @@ MediastreamPlatformSDK()
 
 ### Options
 
-`PRODUCTION`, `QA`
+`PRODUCTION`, `DEV`
 
 ## Enum MediastreamPlayerConfig.VideoTypes
 
 ### Options
 
-`LIVE`, `VOD`
+`LIVE`, `VOD`, `EPISODE`
 
 ## License
 

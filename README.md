@@ -21,6 +21,12 @@ Then run the command:
 carthage update
 ```
 
+Or if you prefer, there is also the pod option:
+
+```
+pod 'MediastreamPlatformSDKiOS', '1.0.33'
+```
+
 Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.
 
 ![alt tag](files/disable_app_transport_security_and_required_background_modes.png)

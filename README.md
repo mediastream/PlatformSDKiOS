@@ -185,6 +185,7 @@ Available events
 * offFullScreen: Triggers whenever the video is not on Fullscreen mode
 * conectionStablished: Triggers whenever the SDK is connected to internet
 * conectionLost: Triggers whenever the SDK lost internet connection
+* finish: Triggers whenever the video ends playing
 
 ### Constructors
 

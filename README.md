@@ -24,7 +24,7 @@ carthage update
 Or if you prefer, there is also the pod option:
 
 ```
-pod 'MediastreamPlatformSDKiOS', '1.0.33'
+pod 'MediastreamPlatformSDKiOS', '1.0.60'
 ```
 
 Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.

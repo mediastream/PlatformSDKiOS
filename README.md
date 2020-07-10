@@ -8,23 +8,10 @@ This library allows you to embed and control your VOD and Live Stream player on 
 
 ## Getting started
 
-First you need to add the library in your dependencies. The easiest way to do it is to install it using Carthage (https://github.com/Carthage/Carthage).
-Once Carthage is already installed, in the root directory of your app, create a file called Cartfile with the following content:
+First you need to add the library in your dependencies. The easiest way to do it is using our cocoapods library:
 
 ```
-github "mediastream/PlatformSDKiOS"
-```
-
-Then run the command:
-
-```
-carthage update
-```
-
-Or if you prefer, there is also the pod option:
-
-```
-pod 'MediastreamPlatformSDKiOS', '1.0.60'
+pod 'MediastreamPlatformSDKiOS', '1.0.62'
 ```
 
 Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.

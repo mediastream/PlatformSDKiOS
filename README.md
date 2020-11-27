@@ -173,6 +173,9 @@ Available events
 * conectionStablished: Triggers whenever the SDK is connected to internet
 * conectionLost: Triggers whenever the SDK lost internet connection
 * finish: Triggers whenever the video ends playing
+* ready: Triggered when the player is ready to play video
+* buffering: Triggered when player enters buffering state
+* seek: Triggered when the user is seeking
 
 ### Constructors
 

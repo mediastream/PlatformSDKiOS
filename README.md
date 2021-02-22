@@ -11,7 +11,7 @@ This library allows you to embed and control your VOD and Live Stream player on 
 First you need to add the library in your dependencies. The easiest way to do it is using our cocoapods library:
 
 ```
-pod 'MediastreamPlatformSDKiOS', '1.0.68'
+pod 'MediastreamPlatformSDKiOS', '1.0.69'
 ```
 
 Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.

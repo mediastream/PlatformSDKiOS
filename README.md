@@ -173,9 +173,14 @@ Available events
 * conectionStablished: Triggers whenever the SDK is connected to internet
 * conectionLost: Triggers whenever the SDK lost internet connection
 * finish: Triggers whenever the video ends playing
-* ready: Triggered when the player is ready to play video
-* buffering: Triggered when player enters buffering state
-* seek: Triggered when the user is seeking
+* ready: Triggers when the player is ready to play video
+* buffering: Triggers when player enters buffering state
+* seek: Triggers when the user is seeking
+* onAdLoaded: Triggers when ad is loaded
+* onAdPlay: Triggers when ad start to play
+* onAdPause: Triggers when ad is paused
+* onAdResume: Triggers when ad is resumed
+* onAdEnded: Triggers whenever the ad ends playing
 
 ### Constructors
 

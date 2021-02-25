@@ -181,6 +181,7 @@ Available events
 * onAdPause: Triggers when ad is paused
 * onAdResume: Triggers when ad is resumed
 * onAdEnded: Triggers whenever the ad ends playing
+* onAdError: Triggers when ad failed
 
 ### Constructors
 

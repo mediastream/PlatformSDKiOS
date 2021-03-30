@@ -102,6 +102,7 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | customUI | boolean | No | Show a custom mediastream UI for AVPlayer. Default: false |
 | loadNextAutomatically | boolean | No | Play next episode if exist (Only available if type EPISODE is setted). Default: false |
 | videoFormat | MediastreamPlayerConfig.AudioVideoFormat | No | Video/Audio format available to play a source, `HLS`, `M4A`. Default: `HLS` |
+| appName | string | No | Very useful to identify traffic in platform analytics. |
 
 
 ### Methods

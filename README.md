@@ -183,6 +183,7 @@ Available events
 * onAdResume: Triggers when ad is resumed
 * onAdEnded: Triggers whenever the ad ends playing
 * onAdError: Triggers when ad failed
+* onAdSkipped: Triggers when ad skipped
 
 ### Constructors
 

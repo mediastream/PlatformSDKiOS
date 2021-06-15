@@ -103,6 +103,7 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | loadNextAutomatically | boolean | No | Play next episode if exist (Only available if type EPISODE is setted). Default: false |
 | videoFormat | MediastreamPlayerConfig.AudioVideoFormat | No | Video/Audio format available to play a source, `HLS`, `M4A`. Default: `HLS` |
 | appName | string | No | Very useful to identify traffic in platform analytics. |
+| playerId | string | No | Gets most of the properties of a player configured in the Mediastream Platform such as skin colors, or settings such as youbora. |
 
 
 ### Methods

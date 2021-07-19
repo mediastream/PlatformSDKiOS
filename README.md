@@ -11,7 +11,7 @@ This library allows you to embed and control your VOD and Live Stream player on 
 First you need to add the library in your dependencies. The easiest way to do it is using our cocoapods library:
 
 ```
-pod 'MediastreamPlatformSDKiOS', '~> 1.1.0'
+pod 'MediastreamPlatformSDKiOS', '~> 1.1.1'
 ```
 
 Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.
@@ -104,6 +104,7 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | videoFormat | MediastreamPlayerConfig.AudioVideoFormat | No | Video/Audio format available to play a source, `HLS`, `M4A`. Default: `HLS` |
 | appName | string | No | Very useful to identify traffic in platform analytics. |
 | playerId | string | No | Gets most of the properties of a player configured in the Mediastream Platform such as skin colors, or settings such as youbora. |
+| referer | string | No | Allows set a referer for your app requests |
 
 
 ### Methods

@@ -11,7 +11,7 @@ This library allows you to embed and control your VOD and Live Stream player on 
 First you need to add the library in your dependencies. The easiest way to do it is using our cocoapods library:
 
 ```
-pod 'MediastreamPlatformSDKiOS', '~> 1.1.1'
+pod 'MediastreamPlatformSDKiOS', '~> 1.1.2'
 ```
 
 Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.
@@ -106,13 +106,13 @@ This class holds the configurations for the MediastreamPlatformSDK.
 | playerId | string | No | Gets most of the properties of a player configured in the Mediastream Platform such as skin colors, or settings such as youbora. |
 | referer | string | No | Allows set a referer for your app requests |
 
-
 ### Methods
 
 | Return | Method | Description |
 | --- | --- | --- |
 | void | addAdCustomAttribute(key: String, value: String) | Add a custom attribute to the Ad. It applys only if an adUrl was passed |
 | void | addDrmHeader(key: String, value: String) | Allows to add headers necessary to complete the request to get the license to play protected files. |
+| void | addYouboraExtraParams(value: String) | Allows send youbora extraparams. The limit is 20 items, the index is equivalent in youbora to the index plus one. |
 
 ### Contructors
 

@@ -10,6 +10,12 @@ This library allows you to embed and control your VOD and Live Stream player on 
 
 First you need to add the library in your dependencies. The easiest way to do it is using our cocoapods library:
 
+For iOS xcframework compatibility
+
+```
+pod 'MediastreamPlatformSDKxC'
+```
+
 For iOS
 
 ```

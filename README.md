@@ -25,7 +25,7 @@ pod 'MediastreamPlatformSDKiOS', '~> 1.1.13'
 For tvOS
 
 ```
-pod 'MediastreamPlatformSDKAppleTV'
+pod 'MediastreamPlatformSDKAppleTV', '~> 0.1.3'
 ```
 
 Don't forget to select "YES" in "Allow Arbitrary Loads", which is inside the "App Transport Security" property. Also, allow "Required Background mode" by selecting the option as in the image.

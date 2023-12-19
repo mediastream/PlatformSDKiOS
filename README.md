@@ -13,7 +13,7 @@ First you need to add the library in your dependencies. The easiest way to do it
 For iOS xcframework compatibility
 
 ```
-pod 'MediastreamPlatformSDKxC', '~> 2.0.0'
+pod 'MediastreamPlatformSDKxC', '~> 2.0.2'
 ```
 
 For iOS
